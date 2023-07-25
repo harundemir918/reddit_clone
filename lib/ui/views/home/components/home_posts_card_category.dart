@@ -12,26 +12,24 @@ class HomePostsCardCategory extends StatelessWidget {
   final Color color;
 
   const HomePostsCardCategory({
-    super.key,
     required this.category,
     required this.color,
+    super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 4.0),
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(16.0),
-      ),
-      child: Text(
-        category,
-        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: kWhiteColor,
-            ),
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Container(
+        margin: const EdgeInsets.symmetric(vertical: 4.0),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        child: Text(
+          category,
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: kWhiteColor,
+              ),
+        ),
+      );
 }

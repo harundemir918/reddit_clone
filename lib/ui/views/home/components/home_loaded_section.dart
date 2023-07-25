@@ -4,7 +4,8 @@ Date: 25.07.2023
 */
 
 import 'package:flutter/material.dart';
-import 'package:reddit_clone/ui/views/home/components/home_posts_list.dart';
+
+import 'home_posts_list.dart';
 
 class HomeLoadedSection extends StatelessWidget {
   final dynamic state;
@@ -12,7 +13,6 @@ class HomeLoadedSection extends StatelessWidget {
   const HomeLoadedSection({super.key, this.state});
 
   @override
-  Widget build(BuildContext context) {
-    return HomePostsList(postsList: state.postsList);
-  }
+  Widget build(BuildContext context) =>
+      HomePostsList(postsList: state.postsList);
 }

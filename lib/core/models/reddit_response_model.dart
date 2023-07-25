@@ -45,12 +45,12 @@ class RedditResponseData {
   String before;
 
   RedditResponseData({
-    this.after,
     required this.dist,
     required this.modhash,
     required this.geoFilter,
     required this.children,
     required this.before,
+    this.after,
   });
 
   factory RedditResponseData.fromJson(Map<String, dynamic> json) =>

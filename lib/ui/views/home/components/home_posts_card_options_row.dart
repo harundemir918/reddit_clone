@@ -10,19 +10,17 @@ class HomePostsCardOptionsRow extends StatelessWidget {
   final String title;
 
   const HomePostsCardOptionsRow({
-    super.key,
     required this.icon,
     required this.title,
+    super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(icon),
-        const SizedBox(width: 8.0),
-        Text(title),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Row(
+        children: [
+          Icon(icon),
+          const SizedBox(width: 8.0),
+          Text(title),
+        ],
+      );
 }

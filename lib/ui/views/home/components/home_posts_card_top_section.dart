@@ -15,32 +15,30 @@ class HomePostsCardTopSection extends StatelessWidget {
   final Post post;
 
   const HomePostsCardTopSection({
-    super.key,
     required this.post,
+    super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex: 2,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              HomePostsCardTitle(title: post.data.title),
-              HomePostsCardCategory(
-                category: post.data.linkFlairText,
-                color: Utils.hexToColor(post.data.linkFlairBackgroundColor),
-              ),
-            ],
+  Widget build(BuildContext context) => Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HomePostsCardTitle(title: post.data.title),
+                HomePostsCardCategory(
+                  category: post.data.linkFlairText,
+                  color: Utils.hexToColor(post.data.linkFlairBackgroundColor),
+                ),
+              ],
+            ),
           ),
-        ),
-        const SizedBox(width: 8.0),
-        Expanded(
-          child: HomePostCardThumbnail(thumbnail: post.data.thumbnail),
-        ),
-      ],
-    );
-  }
+          const SizedBox(width: 8.0),
+          Expanded(
+            child: HomePostCardThumbnail(thumbnail: post.data.thumbnail),
+          ),
+        ],
+      );
 }

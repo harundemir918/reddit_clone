@@ -10,18 +10,16 @@ class HomePostCardThumbnail extends StatelessWidget {
   final String thumbnail;
 
   const HomePostCardThumbnail({
-    super.key,
     required this.thumbnail,
+    super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(8.0),
-      child: CachedNetworkImage(
-        imageUrl: thumbnail,
-        fit: BoxFit.cover,
-      ),
-    );
-  }
+  Widget build(BuildContext context) => ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: CachedNetworkImage(
+          imageUrl: thumbnail,
+          fit: BoxFit.cover,
+        ),
+      );
 }

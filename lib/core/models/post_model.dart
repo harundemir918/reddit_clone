@@ -36,7 +36,6 @@ class Data {
 
   Data({
     required this.subreddit,
-    this.selftext,
     required this.title,
     required this.subredditNamePrefixed,
     required this.downs,
@@ -48,6 +47,7 @@ class Data {
     required this.linkFlairBackgroundColor,
     required this.author,
     required this.numComments,
+    this.selftext,
   });
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(

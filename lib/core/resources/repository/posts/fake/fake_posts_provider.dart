@@ -7,17 +7,13 @@ import 'dart:math';
 
 import '../../../../models/post_model.dart';
 import '../../../mock/mock_posts_list.dart';
-import '../../abstract/abstract_posts_provider.dart';
 
-class FakePostsProvider extends AbstractPostsProvider {
-  @override
+class FakePostsProvider {
   Future<List<Post>> fetchPostsList() async {
-    List<Post> postsList = [];
-    var randomBool = Random().nextBool();
+    final randomBool = Random().nextBool();
     await Future.delayed(const Duration(seconds: 1));
     if (randomBool) {
-      postsList = mockPostsList;
-      return postsList;
+      return mockPostsList;
     } else {
       throw Exception("Failed to fetch data.");
     }

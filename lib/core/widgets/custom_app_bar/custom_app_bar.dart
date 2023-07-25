@@ -14,7 +14,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({required this.title, super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return AppBar(title: Text(title));
-  }
+  Widget build(BuildContext context) => AppBar(title: Text(title));
 }

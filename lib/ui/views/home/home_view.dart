@@ -11,9 +11,7 @@ class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: HomeBody(),
-    );
-  }
+  Widget build(BuildContext context) => const Scaffold(
+        body: HomeBody(),
+      );
 }
