@@ -5,7 +5,6 @@ Date: 25.07.2023
 
 import 'package:flutter/material.dart';
 
-import 'components/home_app_bar.dart';
 import 'components/home_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -14,7 +13,6 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: HomeAppBar(),
       body: HomeBody(),
     );
   }

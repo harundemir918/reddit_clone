@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'core/constants/theme_constants.dart';
 import 'ui/views/home/home_view.dart';
 
 void main() {
@@ -14,10 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Reddit Clone',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
       home: const HomeView(),
     );
   }

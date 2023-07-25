@@ -4,19 +4,34 @@ Date: 25.07.2023
 */
 
 import 'package:flutter/material.dart';
-import 'package:reddit_clone/core/extensions/context_extension.dart';
+
+import 'home_app_bar.dart';
 
 class HomeBody extends StatelessWidget {
-  const HomeBody({super.key});
+  const HomeBody({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: context.getWidth(),
-      height: context.getHeight(),
-      child: const Center(
-        child: Text("Home"),
-      ),
+    return CustomScrollView(
+      slivers: <Widget>[
+        const HomeAppBar(
+          title: "r/FlutterDev",
+          image:
+              "https://styles.redditmedia.com/t5_2x3q8/styles/bannerBackgroundImage_ih7a660qvyv31.png?width=4000&s=7b03ca591f42eaa0459d521a2a395a32f0f37730",
+        ),
+        SliverList(
+          delegate: SliverChildBuilderDelegate(
+            (BuildContext context, int index) {
+              return ListTile(
+                title: Text('List Item $index'),
+              );
+            },
+            childCount: 50,
+          ),
+        ),
+      ],
     );
   }
 }
