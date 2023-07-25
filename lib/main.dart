@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/bloc/home/home_bloc.dart';
-import 'core/constants/theme_constants.dart';
 import 'core/resources/repository/posts/fake/fake_posts_repository.dart';
 import 'ui/views/home/home_view.dart';
 
@@ -22,7 +21,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Reddit Clone',
         debugShowCheckedModeBanner: false,
-        theme: lightTheme,
+        darkTheme: ThemeData.dark(),
+        themeMode: ThemeMode.dark,
         home: const HomeView(),
       ),
     );

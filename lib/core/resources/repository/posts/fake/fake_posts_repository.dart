@@ -8,8 +8,8 @@ import '../../abstract/abstract_posts_repository.dart';
 import 'fake_posts_provider.dart';
 
 class FakePostsRepository extends AbstractPostsRepository {
-  final FakePostsProvider _genresProvider = FakePostsProvider();
+  final FakePostsProvider _postsProvider = FakePostsProvider();
 
   @override
-  Future<List<Post>> fetchPostsList() => _genresProvider.fetchPostsList();
+  Future<List<Post>> fetchPostsList() => _postsProvider.fetchPostsList();
 }

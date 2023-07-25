@@ -21,7 +21,7 @@ class Post {
 
 class Data {
   String subreddit;
-  String selftext;
+  String? selftext;
   String title;
   String subredditNamePrefixed;
   int downs;
@@ -30,11 +30,13 @@ class Data {
   String linkFlairText;
   int score;
   String thumbnail;
+  String linkFlairBackgroundColor;
+  String author;
   int numComments;
 
   Data({
     required this.subreddit,
-    required this.selftext,
+    this.selftext,
     required this.title,
     required this.subredditNamePrefixed,
     required this.downs,
@@ -43,6 +45,8 @@ class Data {
     required this.linkFlairText,
     required this.score,
     required this.thumbnail,
+    required this.linkFlairBackgroundColor,
+    required this.author,
     required this.numComments,
   });
 
@@ -57,6 +61,8 @@ class Data {
         linkFlairText: json["link_flair_text"],
         score: json["score"],
         thumbnail: json["thumbnail"],
+        linkFlairBackgroundColor: json["link_flair_background_color"],
+        author: json["author"],
         numComments: json["num_comments"],
       );
 
@@ -71,6 +77,8 @@ class Data {
         "link_flair_text": linkFlairText,
         "score": score,
         "thumbnail": thumbnail,
+        "link_flair_background_color": linkFlairBackgroundColor,
+        "author": author,
         "num_comments": numComments,
       };
 }

@@ -4,6 +4,7 @@ Date: 25.07.2023
 */
 
 import 'package:flutter/material.dart';
+import 'package:reddit_clone/ui/views/home/components/home_posts_card.dart';
 
 import '../../../../core/models/post_model.dart';
 
@@ -20,9 +21,7 @@ class HomePostsList extends StatelessWidget {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
-          return ListTile(
-            title: Text(postsList[index].data.title),
-          );
+          return HomePostsCard(post: postsList[index]);
         },
         childCount: postsList.length,
       ),

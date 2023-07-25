@@ -7,6 +7,3 @@ import 'dart:ui';
 
 const kWhiteColor = Color(0xFFFFFFFF);
 const kBlackColor = Color(0xFF000000);
-
-const kBackgroundColor = Color(0xFFFFFFFF);
-const kTextColor = kBlackColor;

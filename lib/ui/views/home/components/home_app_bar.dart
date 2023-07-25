@@ -28,9 +28,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           title: LayoutBuilder(
             builder: (context, constraints) => HomeAppBarTitle(
               title: title,
-              color: constraints.maxHeight > context.getDynamicHeight(0.2)
-                  ? kWhiteColor
-                  : kBlackColor,
+              color: kWhiteColor,
             ),
           ),
           centerTitle: true,
