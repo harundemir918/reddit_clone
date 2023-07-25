@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/bloc/home/home_bloc.dart';
-import 'core/resources/repository/posts/fake/fake_posts_repository.dart';
+import 'core/resources/repository/posts/posts_repository.dart';
 import 'ui/views/home/home_view.dart';
 
 void main() {
@@ -10,7 +10,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final _postsRepository = FakePostsRepository();
+  final _postsRepository = PostsRepository();
 
   MyApp({super.key});
 

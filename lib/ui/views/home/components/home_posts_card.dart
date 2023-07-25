@@ -12,8 +12,8 @@ import 'home_posts_card_author.dart';
 import 'home_posts_card_category.dart';
 import 'home_posts_card_description.dart';
 import 'home_posts_card_options.dart';
-import 'home_posts_card_thumbnail.dart';
 import 'home_posts_card_title.dart';
+import 'home_posts_card_top_section.dart';
 
 class HomePostsCard extends StatelessWidget {
   final Post post;
@@ -31,29 +31,19 @@ class HomePostsCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HomePostsCardAuthor(author: post.data.author),
-            Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      HomePostsCardTitle(title: post.data.title),
-                      HomePostsCardCategory(
-                        category: post.data.linkFlairText,
-                        color: Utils.hexToColor(
-                            post.data.linkFlairBackgroundColor),
-                      ),
-                    ],
+            if (post.data.thumbnail != "self")
+              HomePostsCardTopSection(post: post)
+            else
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  HomePostsCardTitle(title: post.data.title),
+                  HomePostsCardCategory(
+                    category: post.data.linkFlairText,
+                    color: Utils.hexToColor(post.data.linkFlairBackgroundColor),
                   ),
-                ),
-                if (post.data.thumbnail != "self")
-                  Expanded(
-                    child:
-                        HomePostCardThumbnail(thumbnail: post.data.thumbnail),
-                  ),
-              ],
-            ),
+                ],
+              ),
             if (post.data.selftext != null && post.data.selftext!.isNotEmpty)
               HomePostsCardDescription(description: post.data.selftext!),
             HomePostsCardOptions(post: post),
