@@ -53,6 +53,6 @@ The app uses the following packages for its functionality:
 
 ## License
 
-The Reddit Clone App is open-source software licensed under the [MIT License](LICENSE).
+The Reddit Clone app is open-source software licensed under the [MIT License](LICENSE).
 
 Thank you for using the Reddit Clone! We hope you find it useful and enjoyable. Happy browsing!
