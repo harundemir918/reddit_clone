@@ -1,7 +1,5 @@
 # Reddit Clone
 
-![Screenshot 1](screens/1.png)
-
 The Reddit Clone app is a simple application built to mimic the functionality of Reddit. It allows users to view a list of posts on a single page and offers theme switching functionality. The app utilizes BLoC for efficient state management, Dio for fetching data from the API, shared_preferences for handling local storage, and cached_network_image for caching images.
 
 ## Features
@@ -13,7 +11,7 @@ The Reddit Clone app is a simple application built to mimic the functionality of
 
 ## Screenshots
 
-[Insert screenshots here if available]
+![Screenshot 1](screens/1.png)
 
 ## Getting Started
 
